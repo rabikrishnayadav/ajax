@@ -5,6 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Ajax</title>
 	<link rel="stylesheet" href="bootstrap.css">
+	<script type="text/javascript" src="jquery-3.5.1.min.js"></script>
 </head>
 <body>
 	<h2 class="text-center bg-warning" style="height:50px">What is Ajax?</h2>
@@ -15,6 +16,25 @@
 	AJAX just uses a combination of:<br>
 	A browser built-in XMLHttpRequest object (to request data from a web server)<br>JavaScript and HTML DOM (to display or use the data)<br><br>
 	AJAX allows web pages to be updated asynchronously by exchanging data with a web server behind the scenes.<br>This means that it is possible to update parts of a web page, without reloading the whole page.<br><br>
+
+	<h4>Methods</h4>
+	<ol>
+		<li>The load()</li>
+		The load() method loads data from a server and puts the returned data into the selected element.<br>
+		Syntax:<br><code>$(selector).load(URL,data,callback);</code>
+		Example:<br>
+			<div id="loaddata">
+				<h2>This is going to be change without the page load.</h2>
+				<button class="btn btn-success" id="btnclick">Click on it</button>
+			</div>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$('#btnclick').click(function(){
+						$('#loaddata').load('load.html');
+					})
+				});
+			</script>
+	</ol>
 	</div>
 </body>
 </html>
