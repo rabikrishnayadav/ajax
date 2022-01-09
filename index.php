@@ -74,7 +74,16 @@
 		The optional callback parameter is the name of a function to be executed if the request succeeds.<br>
 		Example:<br>
 		<code>
-			
+			$(document).ready(function(){<br>
+				$('.btnclick1').click(function(){<br>
+					$.post('post.php',{<br>
+						name: 'Rabi Kr Yadav',<br>
+						address : 'Janakpur'<br>
+					}, function(data,status){<br>
+						$('#changerid1').html(data);<br>
+					});<br>
+				});<br>
+			});<br>
 		</code>
 		<kbd>Result:</kbd>
 		<h3 id="changerid1">When you click on the button then new data will come by post method</h3>
@@ -126,7 +135,25 @@
 				}
 			}
 		}
-	</script>
-	</div>
+	</script><br><hr><br>
+	<h1 class="text-center bg-primary" style="height:60px;">One of the Best Example Dropdown List</h1>
+	<hr><br><br>
+		<div id="changerid2">
+		<h3 class="font-weight-bold">just Click on the button</h3>
+		<button class="btn btn-success btnclick2">Click here</button>
+		</div>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('.btnclick2').click(function(){
+
+					$.post('dropdown.php',{},
+						function(data,status){
+						$('#changerid2').html(data);
+					});
+				});
+			});
+		</script>
+		<br><br>
+	</div><hr><br><h1 class="text-center bg-success font-weight-bold">Thanks</h1>
 </body>
 </html>
